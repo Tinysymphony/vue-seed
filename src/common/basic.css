@@ -1,0 +1,164 @@
+.none, .hide { display: none; }
+
+.f-left, .f-l { float: left; }
+.f-right, .f-r { float: right; }
+
+.black3 { color: #333; }
+.black4 { color: #444; }
+.black5 { color: #555; }
+.black6 { color: #666; }
+.black7 { color: #777; }
+.black8 { color: #888; }
+.black9 { color: #999; }
+.black10 { color: #aaa; }
+
+.fs0 { font-size: 0; }
+.fs8 { font-size: 8px; }
+.fs10 { font-size: 10px; }
+.fs12 { font-size: 12px; }
+.fs13 { font-size: 13px; }
+.fs14 { font-size: 14px; }
+.fs15 { font-size: 15px; }
+.fs16 { font-size: 16px; }
+.fs17 { font-size: 17px; }
+.fs18 { font-size: 18px; }
+.fs20 { font-size: 20px; }
+.fs22 { font-size: 22px; }
+.fs24 { font-size: 24px; }
+.fs26 { font-size: 26px; }
+.fs28 { font-size: 28px; }
+.fs30 { font-size: 30px; }
+
+.bold { font-weight: bolder; }
+.text-center { text-align: center; }
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.link { color: #51bfff; }
+.main-red { color: #d8321f; }
+#app .bg-red { background: #d8321f; }
+
+.retina-1px-border-bottom::after, .retina-1px-border-top::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+
+.retina-1px-border-top::before {
+  background-image: linear-gradient(180deg,#D8D8D8,#D8D8D8 50%,transparent 0);
+  background-position: top;
+  top: 0;
+}
+
+.retina-1px-border-bottom::after {
+  background-image: linear-gradient(180deg, transparent, transparent 50%, #D8D8D8 0);
+  background-position: bottom;
+  bottom: 0;
+}
+
+.retina-1px-border-top-bg, .retina-1px-border-bottom-bg {
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+}
+.retina-1px-border-bottom-bg {
+  background-image: linear-gradient(180deg, transparent, transparent 50%, #D8D8D8 0);
+  background-position: bottom;
+}
+
+.retina-1px-border-top-bg {
+  background-image: linear-gradient(180deg,#D8D8D8,#D8D8D8 50%,transparent 0);
+  background-position: top;
+}
+
+.no-select { user-select: none; }
+
+.fix, .fixed { position: fixed; }
+
+.btn-disabled { background: #999; cursor: default; }
+
+.scroller { -webkit-overflow-scrolling: touch; }
+
+.t-c { text-align: center; }
+.t-l { text-align: left; }
+.t-r { text-align: right; }
+
+.m-l-xs { margin-left: 5px; }
+.m-l-sm { margin-left: 10px; }
+.m-l-md { margin-left: 15px; }
+.m-l-lg { margin-left: 20px; }
+.m-t-xs { margin-top: 5px; }
+.m-t-sm { margin-top: 10px; }
+.m-t-md { margin-top: 15px; }
+.m-t-lg { margin-top: 20px; }
+.m-r-xs { margin-right: 5px; }
+.m-r-sm { margin-right: 10px; }
+.m-r-md { margin-right: 15px; }
+.m-r-lg { margin-right: 20px; }
+.m-b-xs { margin-bottom: 5px; }
+.m-b-sm { margin-bottom: 10px; }
+.m-b-md { margin-bottom: 15px; }
+.m-b-lg { margin-bottom: 20px; }
+.m-xs { margin: 5px; }
+.m-sm { margin: 10px; }
+.m-md { margin: 15px; }
+.m-lg { margin: 20px; }
+
+.p-l-xs { padding-left: 5px; }
+.p-l-sm { padding-left: 10px; }
+.p-l-md { padding-left: 15px; }
+.p-l-lg { padding-left: 20px; }
+.p-t-xs { padding-top: 5px; }
+.p-t-sm { padding-top: 10px; }
+.p-t-md { padding-top: 15px; }
+.p-t-lg { padding-top: 20px; }
+.p-r-xs { padding-right: 5px; }
+.p-r-sm { padding-right: 10px; }
+.p-r-md { padding-right: 15px; }
+.p-r-lg { padding-right: 20px; }
+.p-b-xs { padding-bottom: 5px; }
+.p-b-sm { padding-bottom: 10px; }
+.p-b-md { padding-bottom: 15px; }
+.p-b-lg { padding-bottom: 20px; }
+.p-xs { padding: 5px; }
+.p-sm { padding: 10px; }
+.p-md { padding: 15px; }
+.p-lg { padding: 20px; }
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary { color: #fff; background-color: #f15341; }
+.btn-info { color: #fff; background-color: #41d1f1; }
+.btn-default { color: #fff; background-color: rgb(129, 210, 240); }
+
+.p-r { position: relative; }
+.p-a { position: absolute; }
+
+.block { display: block; }
+
+.wp {
+  padding: 64px 0 60px 0;
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.panel {
+  padding: 15px;
+  margin: 15px;
+  background: #fff;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.07);
+  border-top: 8px solid rgba(34, 170, 221, 0.89);
+  animation: popup .3s ease;
+}

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue","Helvetica","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "Microsoft Yahei", "メイリオ","Meiryo","ＭＳ Ｐゴシック",arial,sans-serif;
+}
+
+/*html5*/
+article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+  display: block
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  font-family: "PingFang SC", "Lantinghei SC", "Helvetica Neue","Helvetica","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "Microsoft Yahei", "メイリオ","Meiryo","ＭＳ Ｐゴシック",arial,sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}

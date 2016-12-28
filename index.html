@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>鸽鸽</title>
+    <link rel="dns-prefetch" href="//example.com">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, height=device-height, minimum-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <style id="app.css"></style>
+    <script type="text/javascript">
+      + function (designWidth, rem2px) {
+        var d = window.document.createElement('div');
+        d.style.width = '1rem';
+        d.style.display = "none";
+        var head = window.document.getElementsByTagName('head')[0];
+        head.appendChild(d);
+        var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
+        d.remove();
+        // document.documentElement.style.fontSize = window.innerWidth / designWidth * rem2px / defaultFontSize * 100 + '%';
+        var st = document.createElement('style');
+        // 适应屏幕旋转
+        var portrait = "@media screen and (min-width: "+window.innerWidth+"px) {html{font-size:"+ ((window.innerWidth/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}";
+        var landscape = "@media screen and (min-width: "+window.innerHeight+"px) {html{font-size:"+ ((window.innerHeight/(designWidth/rem2px)/defaultFontSize)*100) +"%;}}"
+        st.innerHTML = portrait + landscape;
+        head.appendChild(st);
+        return defaultFontSize
+      }(320, 10);
+    </script>
+    <script id="webpackjsonp" type="text/javascript">
+      <!-- @(manifest.js) -->
+    </script>
+    <!-- localStorage loader -->
+    <script id="lslaoder" type="text/javascript">
+      !function(t,e){t.LS={tag:"/*LSLOADER*/",jsQueue:[],jsmap:{},cssmap:{},getItem:function(e){var s="";try{s=t.localStorage.getItem(e)}catch(t){s=""}return s},removeItem:function(e){try{t.localStorage.removeItem(e)}catch(t){}},setItem:function(e,s){try{t.localStorage.setItem(e,s)}catch(t){}},load:function(t,e,s){var i=this.getItem(t);if(s=s||this.noop,!i)return this.loadFromSource(t,e,s);var n=i.split(this.tag)[0],o=i.split(this.tag)[1];return n==e&&o?void(/\.js$/.test(n)?(this.jsQueue.push({id:t,code:o,status:"unload"}),this.insertJS(t,o,s)):/\.css$/.test(n)?this.insertCSS(t,o,s):this.loadFromSource(t,e,s)):this.loadFromSource(t,e,s)},insertJS:function(t,s,i){if(i=i||this.noop,t&&s)for(var n in this.jsQueue)this.jsQueue[n].id===t&&(this.jsQueue[n].code=s);var o=e.getElementsByTagName("script")[0],u=e.createElement("script");if(this.jsQueue.length>0&&this.jsQueue[0].code&&"failed"!=this.jsQueue[0].status)u.appendChild(e.createTextNode(this.jsQueue[0].code)),o.parentNode.appendChild(u),i(),this.jsQueue.shift(),this.jsQueue.length>0&&this.insertJS();else if(this.jsQueue.length>0&&"failed"===this.jsQueue[0].status){var a=this;u.src=a.jsQueue[0].url,u.id=a.jsQueue[0].id,u.onload=function(){i(),a.jsQueue.shift(),a.jsQueue.length>0&&a.insertJS()},this.jsQueue.status="loading",o.parentNode.appendChild(u)}},insertCSS:function(t,s,i){e.getElementById(t).appendChild(e.createTextNode(s)),i()},loadFromSource:function(t,e,s){/\.js$/.test(e)?this.loadJS(t,e):/\.css$/.test(e)&&this.loadCSS(t,e,s)},loadJS:function(t,e){var s=this;s.jsQueue.push({id:t,url:e,code:""}),s.xhrLoad(e,function(i){s.setItem(t,e+s.tag+i),s.insertJS(t,i)},function(){s.tagLoadJS(t,e)})},loadCSS:function(t,s){var i=this;i.xhrLoad(s,function(n){i.setItem(t,s+i.tag+n),e.getElementById(t).appendChild(e.createTextNode(n))},function(){i.tagLoadCSS(t,s)})},tagLoadJS:function(t,e){if(!this.jsmap[t]){this.jsmap[t]=!0;for(var s in this.jsQueue)this.jsQueue[s].id==t&&(this.jsQueue[s].code="",this.jsQueue[s].status="failed",this.jsQueue[s].url=e);this.insertJS()}},tagLoadCSS:function(t,s,i){if(!this.cssmap[t]){this.cssmap[t]=!0;var n=e.createElement("link"),o=e.getElementsByTagName("head")[0];n.rel="stylesheet",n.href=s,n.charset="utf-8",n.onload=n.onerror=i||this.noop,o.appendChild(n)}},xhrLoad:function(t,e,s){e=e||this.noop,s=s||this.noop;var i=new XMLHttpRequest;try{i.open("get",t,!0),i.onreadystatechange=function(){4==i.readyState&&((i.status>=200&&i.status<300||304==i.status)&&""!=i.response?e(i.response):s())},i.send()}catch(t){s()}},noop:function(){}}}(window,document);
+      <!-- $(app.css) -->
+      <!-- $(vendor.js) -->
+    </script>
+    <!-- analytics code -->
+    <script type="text/javascript">
+      // Analytics
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+    <script id="app.js" type="text/javascript">
+      <!-- $(app.js) -->
+    </script>
+  </body>
+</html>
