@@ -1,7 +1,7 @@
 /**
  * @file 滚动节流指令 (v-scroll="handler")
  * @date 2016-11-18
- * @author wangyi27 (wangyi27@meituan.com)
+ * @author wangyi27 (zjutiny@gmail.com)
  * @desc 可使用v-scroll.frame采用动画帧节流，默认使用60帧的setTimeout节流
  * @name scrollDirective.js
  */

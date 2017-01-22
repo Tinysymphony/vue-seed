@@ -1,7 +1,7 @@
 /**
  * @file 图片懒加载指令 (v-lazy="url")
  * @date 2016-11-12
- * @author wangyi27 (wangyi27@meituan.com)
+ * @author wangyi27 (zjutiny@gmail.com)
  * @desc 使用节流的滚动回调函数，加载完毕后会自动解除监听
  * @name lazyDirective.js
  */
@@ -16,6 +16,14 @@ let scrollEle = null
 const LOAD_FAIL = 'failed'
 const LOAD_SUCCESS = 'loaded'
 const lazyLoadHandler = _.throttle(lazyLoadImage)
+
+// check whether passive option is supported
+let option = false
+window.addEventListener('test', () => {}, {
+  get passive () {
+    option = {passive: true}
+  }
+})
 
 function isImageInView (el) {
   const rect = el.getBoundingClientRect()
@@ -46,14 +54,14 @@ function lazyLoadImage () {
 
 function bindScroll () {
   const el = document.querySelector(scrollEle) || window
-  el.addEventListener('scroll', lazyLoadHandler)
+  el.addEventListener('scroll', lazyLoadHandler, option)
   lazyLoadHandler()
   isBindScroll = true
 }
 
 function unbindScroll () {
   const el = document.querySelector(scrollEle) || window
-  el.removeEventListener('scroll', lazyLoadHandler)
+  el.removeEventListener('scroll', lazyLoadHandler, option)
   isBindScroll = false
   elementList = []
 }
